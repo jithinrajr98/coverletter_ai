@@ -1,11 +1,8 @@
 import streamlit as st
 from datetime import datetime
 from llm_utils import cover_letter_prompt, profile_modifier_prompt, job_analysis_prompt
-from docx import Document
 import os
-from docx2pdf import convert
 import tempfile
-from fpdf import FPDF
 import google.generativeai as genai
 from groq import Groq
 from config.styles import apply_custom_styles, set_page_config, header_section
@@ -98,51 +95,7 @@ def update_profile_section(doc_path, new_profile_text):
         st.error(f"Error updating DOCX file: {str(e)}")
         return False
 
-def convert_to_pdf(docx_path):
-    """Convert DOCX to PDF and return PDF path"""
-    try:
-        with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as temp_pdf:
-            pdf_path = temp_pdf.name
-        convert(docx_path, pdf_path)
-        return pdf_path
-    except Exception as e:
-        st.error(f"Error converting to PDF: {str(e)}")
-        return None
 
-def create_pdf_from_text(content, filename):
-    """Create a PDF from text content with better formatting"""
-    try:
-        pdf = FPDF()
-        pdf.add_page()
-        pdf.set_font("Arial", size=11)
-        pdf.set_margins(20, 20, 20)
-        
-        # Split content into lines and handle text wrapping
-        lines = content.split('\n')
-        for line in lines:
-            if line.strip():  # Skip empty lines
-                # Handle long lines by splitting them
-                words = line.split(' ')
-                current_line = ""
-                for word in words:
-                    test_line = current_line + " " + word if current_line else word
-                    if pdf.get_string_width(test_line) < 170:  # Max width
-                        current_line = test_line
-                    else:
-                        if current_line:
-                            pdf.cell(0, 6, txt=current_line.encode('latin-1', 'replace').decode('latin-1'), ln=1)
-                        current_line = word
-                if current_line:
-                    pdf.cell(0, 6, txt=current_line.encode('latin-1', 'replace').decode('latin-1'), ln=1)
-            else:
-                pdf.cell(0, 6, txt="", ln=1)  # Empty line
-        
-        temp_pdf_path = f"{filename}.pdf"
-        pdf.output(temp_pdf_path)
-        return temp_pdf_path
-    except Exception as e:
-        st.error(f"Error creating PDF: {str(e)}")
-        return None
 
 def load_resume():
     """Load resume content from file"""
@@ -326,22 +279,7 @@ def main():
                     )
                 
                 with col_pdf:
-                    if st.button("📊 Generate PDF", use_container_width=True):
-                        with st.spinner("📄 Creating PDF..."):
-                            pdf_path = create_pdf_from_text(
-                                current_letter,
-                                f"Jithin_Reghuvaran_coverletter{language_suffix}"
-                            )
-                            if pdf_path:
-                                with open(pdf_path, "rb") as f:
-                                    st.download_button(
-                                        label="⬇️ Download PDF",
-                                        data=f,
-                                        file_name=f"Jithin_Reghuvaran_coverletter{language_suffix}.pdf",
-                                        mime="application/pdf",
-                                        use_container_width=True
-                                    )
-                                os.remove(pdf_path)
+                   pass
             else:
                 st.info("👆 Generate a cover letter using the job description")
         
@@ -393,77 +331,8 @@ def main():
                 )
             
             with col_prof_pdf:
-                if st.button("📊 Generate Profile PDF", use_container_width=True):
-                    with st.spinner("📄 Creating Profile PDF..."):
-                        pdf_path = create_pdf_from_text(
-                            current_profile,
-                            f"Jithin_Reghuvaran_profile{profile_suffix}"
-                        )
-                        if pdf_path:
-                            with open(pdf_path, "rb") as f:
-                                st.download_button(
-                                    label="⬇️ Download Profile PDF",
-                                    data=f,
-                                    file_name=f"Jithin_Reghuvaran_profile{profile_suffix}.pdf",
-                                    mime="application/pdf",
-                                    use_container_width=True,
-                                    key=f"profile_pdf_download{profile_suffix}"
-                                )
-                            os.remove(pdf_path)
-            
-            # DOCX Update Section
-            st.markdown("### 📄 Update Word Document")
-            docx_file = st.file_uploader("Upload your CV (DOCX)", type=["docx"], help="Upload your CV to update the profile section")
-            
-            if docx_file is not None:
-                # Option to choose language for DOCX update
-                update_lang = st.radio(
-                    "Choose language for CV update:",
-                    ["English", "French"],
-                    horizontal=True,
-                    help="Select which version of the profile to use for updating your CV"
-                )
-                
-                if st.button("🔄 Update DOCX Profile", use_container_width=True):
-                    with st.spinner("📄 Updating and converting your document..."):
-                        try:
-                            with tempfile.NamedTemporaryFile(suffix=".docx", delete=False) as temp_docx:
-                                temp_docx_path = temp_docx.name
-                                temp_docx.write(docx_file.getbuffer())
-                            
-                            # Choose which profile version to use
-                            profile_to_use = st.session_state.modified_resume_fr if update_lang == "French" and st.session_state.modified_resume_fr else st.session_state.modified_resume
-                            lang_suffix = "_fr" if update_lang == "French" else "_en"
-                            
-                            success = update_profile_section(
-                                temp_docx_path,
-                                profile_to_use.replace("Profile:\n", "").replace("Profil:\n", "")
-                            )
-                            
-                            if success:
-                                pdf_path = convert_to_pdf(temp_docx_path)
-                                
-                                if pdf_path:
-                                    with open(pdf_path, "rb") as f:
-                                        st.download_button(
-                                            label=f"⬇️ Download Updated CV ({update_lang}) PDF",
-                                            data=f,
-                                            file_name=f"Jithin_Reghuvaran_CV{lang_suffix}.pdf",
-                                            mime="application/pdf",
-                                            use_container_width=True,
-                                            key=f"cv_download{lang_suffix}"
-                                        )
-                                    st.success("✅ PDF generated successfully!")
-                                    os.remove(pdf_path)
-                                else:
-                                    st.warning("⚠️ Could not convert to PDF")
-                            else:
-                                st.warning("⚠️ Profile section not found in document")
-                        except Exception as e:
-                            st.error(f"❌ Error processing document: {str(e)}")
-                        finally:
-                            if os.path.exists(temp_docx_path):
-                                os.remove(temp_docx_path)
+                pass
+                   
     
     # Execution time display
     if st.session_state.execution_time:
