@@ -1,47 +1,53 @@
 def cover_letter_prompt(job_description: str, resume: str) -> str:
+    
     """Generate a cover letter prompt based on job description and resume"""
+    
     return f"""
-Create a professional cover letter for the following job position using my resume. Follow this template exactly:
+    Create a professional cover letter for the following job position using my resume. Follow this template exactly:
 
- Jithin Raj Reghuvaran
- Paris, France
- (+33) 745293669 | jithinrajr98@gmail.com
+    Jithin Raj Reghuvaran
+    Recent Master 2 Graduate in Data Science from France
+    Paris, France
+    (+33) 745293669 | [jithinrajr98@gmail.com](mailto:jithinrajr98@gmail.com)
 
-Subject: Application for the position of [JOB TITLE]
+    Subject: Application for the position of [JOB TITLE]
 
-Dear Hiring Manager,
+    Dear Hiring Manager,
 
-I'm writing to express my strong interest in the [JOB TITLE] position at [COMPANY NAME]. With [X] years of experience in [KEY SKILL AREA 1] and [KEY SKILL AREA 2], I've successfully delivered results such as [SPECIFIC ACHIEVEMENT OR PROJECT TYPE].
+    I'm writing to express my strong interest in the [JOB TITLE] position at [COMPANY NAME]. I am recent Master 2 graduate in Data Science from France with [X] years of experience in [KEY SKILL AREA 1] and [KEY SKILL AREA 2]. I've successfully delivered results such as [SPECIFIC ACHIEVEMENT OR PROJECT TYPE].
 
-My expertise with [RELEVANT TOOL/TECHNOLOGY 1], [RELEVANT TOOL/TECHNOLOGY 2], and [RELEVANT TOOL/TECHNOLOGY 3] aligns well with your requirements. For example, I [QUANTIFIED ACHIEVEMENT] by [SPECIFIC ACTION], resulting in [MEASURABLE OUTCOME].
+    My expertise with [RELEVANT TOOL/TECHNOLOGY 1], and [RELEVANT TOOL/TECHNOLOGY 2], aligns well with your requirements. For example, I [QUANTIFIED ACHIEVEMENT] by [SPECIFIC ACTION], resulting in [MEASURABLE OUTCOME].
 
-I'm particularly drawn to [COMPANY NAME] because of [SPECIFIC COMPANY PROJECT/INITIATIVE OR VALUES]. My experience in [KEY EXPERTISE AREA] would enable me to contribute meaningfully to [SPECIFIC TEAM GOAL OR CHALLENGE].
+    I'm particularly drawn to [COMPANY NAME] because of [SPECIFIC COMPANY PROJECT/INITIATIVE OR VALUES]. My experience in [KEY EXPERTISE AREA] would enable me to contribute meaningfully to [SPECIFIC TEAM GOAL OR CHALLENGE].
 
-I would welcome the opportunity to discuss how my background in [RELEVANT FIELD] could support your team's objectives.
+    I would welcome the opportunity to discuss how my background in [RELEVANT FIELD] could support your team's objectives.
 
-Best regards,
-Jithin Raj Reghuvaran
+    Best regards,
+    Jithin Raj Reghuvaran
 
-**Guidelines:**
-1. Keep the letter concise and professional (150-200 words max)
-2. Focus on quantifiable achievements from my resume that relate to the job
-3. Match at least 3 key requirements from the job description
-4. If the job description doesn't match my resume perfectly, write a brief but enthusiastic letter expressing genuine interest
-5. Extract the company name and job title from the job description
-6. Use specific examples and metrics where possible
-7. Maintain a confident but humble tone
+    **Guidelines:**
+    1. Keep the letter concise and professional (150-200 words max)
+    2. Focus on quantifiable achievements from my resume that relate to the job
+    3. Match at least 3 key requirements from the job description
+    4. If the job description doesn't match my resume perfectly, write a brief but enthusiastic letter expressing genuine interest
+    5. Extract the company name and job title from the job description
+    6. Use specific examples and metrics where possible
+    7. Maintain a confident but humble tone
+    8. Highlight the Master 2 Data Science degree when relevant to the position
 
-**Job Description:**
-{job_description}
+    **Job Description:**
+    {job_description}
 
-**My Resume:**
-{resume}
+    **My Resume:**
+    {resume}
 
-Generate ONLY the cover letter text, no additional commentary.
-"""
+    Generate ONLY the cover letter text, no additional commentary.
+    """
 
 def profile_modifier_prompt(job_description: str, current_profile: str) -> str:
+    
     """Generate a prompt to modify the profile section based on job description"""
+    
     return f"""
 Adapt the professional summary to match the target job description while maintaining credibility and core achievements. Follow these specific rules:
 
