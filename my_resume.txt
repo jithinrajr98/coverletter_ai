@@ -1,0 +1,37 @@
+JITHIN RAJ REGHUVARAN
+AI Engineer | Paris | (+33) 745293669 | jithinrajr98@gmail.com
+PROFILE
+AI Engineer with 5+ years of experience deploying production-grade ML/Deep learning models and multi-agent systems. Led a preventive maintenance project for a Fortune 500 client, achieving $1.8M/year in savings. Expert in building agentic AI workflows, RAG architectures, and cloud-native ML pipelines.
+TECHNICAL SKILLS
+Open AI, Claude, Ollama, Mastra, LangChain, LangGraph, CrewAI, MCP, Hugging Face, n8n, Pinecone, Cosmos DB, FastAPI, Streamlit, Triton, TensorFlow, Pytorch, MLflow, Databricks, Microsoft Fabric, Azure, DBT, SQL, Hadoop, ElasticSearch, MongoDB, Azure DevOps.
+EDUCATION
+•       Master’s in management - Grande École Program | Burgundy School of Business, France | 2023-2025
+•       MSc in Data Science | Burgundy School of Business, France | (2024-2025)
+•       Bachelor’s in computer science (Equivalent to Bac+4) | University of Kerala, India
+EXPERIENCE 
+AI Engineer Nurge | Remote | Paris , France                                                                                          04/2025 - Present
+•       Built agentic AI solution for Sales Development Representative (SDR) workflow using CrewAI and Claude with specialized agents for research, enrichment, and outreach.
+•       Designed and implemented workflow automation using n8n for Go-To-Market tools integration.
+Data & AI Intern Chanel | Paris, France                                                                                                                09/2024 - 03/2025
+•       Developed cloud analytics platform on Microsoft Fabric unifying 5 ERPs via Azure, Azure Data Factory, and 200+ dbt models.
+•       Reduced ELT latency by 50% through optimizations in SQL, dbt and CI/CD.
+AI Engineer Radisys Corporation | Bengaluru, India                                                                       04/2022 - 08/2023
+•       Developed a voice AI system for IoT devices handling 100K+ daily requests with 200ms latency.
+•       Designed and implemented an end-to-end model deployment pipeline that automated transformer model fine tuning, ONNX quantization, containerization and triton server deployment.
+•       Implemented a RAG architecture using OpenAI, Pinecone, and LlamaIndex for STB platforms, enabling Q&A on 100K+ multimedia titles.
+Consultant Data Scientist Applied Materials | Bengaluru, India                                                                              07/2020 - 03/2022
+•       Built an end-to-end ML pipeline on Databricks, including a Delta Lake-based feature store (200+ features), drift detection (KS test, PSI < 0.1), and automated retraining with MLflow; reduced training-serving skew by 90%.
+•       Deployed CatBoost models via MLflow Registry to Seldon Core, enabling containerized serving with A/B testing.
+•       Developed a Vector Autoregression (VAR) model deployed as a REST API, reducing equipment downtime by 40% via automated failure alerts. 
+Data Scientist PrimEra | Hyderabad, India                                                                                                  04/2018 - 06/2020
+•       Fine-tuned BERT model for clinical negation detection, improving accuracy by 36% and enhancing reliability of diagnostic support systems.
+•       Improved HL7 note ingestion by 70% using parallelized ETL pipelines (Python, Spark) and efficient NoSQL design (MongoDB).
+•       Developed chatbot to automate 30% of medical coding workflows, reducing manual effort and coding errors.
+CERTIFICATES
+•       Fundamentals of AI agents by Hugging Face
+•       Alteryx Designer Core
+•       Microsoft Azure Fundamentals
+LANGUAGES
+•       English (Fluent)
+•       Hindi (Native)
+•       French (Professional)
