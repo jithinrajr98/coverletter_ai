@@ -3,7 +3,6 @@ from datetime import datetime
 from llm_utils import cover_letter_prompt, profile_modifier_prompt, job_analysis_prompt
 import os
 import tempfile
-import google.generativeai as genai
 from groq import Groq
 from config.styles import apply_custom_styles, set_page_config, header_section
 from dotenv import load_dotenv
