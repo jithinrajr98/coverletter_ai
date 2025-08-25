@@ -6,8 +6,8 @@ import base64
 # ====== STYLE CONFIGURATION ======
 def set_page_config():
     st.set_page_config(
-        page_title="French Learner",
-        page_icon="🇫🇷",
+        page_title="Cover Letter Crafter",
+        page_icon="📝",
         layout="wide",
         initial_sidebar_state="expanded"
     )
