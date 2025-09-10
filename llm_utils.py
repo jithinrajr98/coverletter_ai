@@ -85,10 +85,10 @@ def translation_prompt(text: str, target_language: str = "French", content_type:
     """Generate a prompt for translating professional content"""
     if content_type == "profile":
         instruction = "Translate the following professional profile summary to {target_language}."
-        additional_context = "This is a CV/resume profile section that should maintain its professional impact and technical terminology. Don't translate specific technical terms or position names."
+        additional_context = "This is a CV/resume profile section that should maintain its professional impact and technical terminology. Don't translate specific technical terms like machine learning, deep learning or position names."
     else:
         instruction = f"Translate the following professional {content_type} to {target_language}."
-        additional_context = f"This is a professional {content_type} that should maintain formal business correspondence standards. Don't translate specific technical terms or position names."
+        additional_context = f"This is a professional {content_type} that should maintain formal business correspondence standards. Don't translate specific technical terms  like machine learning, deep learning  or position names."
     
     return f"""
 {instruction}
