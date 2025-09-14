@@ -201,7 +201,8 @@ def main():
                             start_time = datetime.now()
                             response = GROQ_CLIENT.chat.completions.create(
                                 messages=[{"role": "user", "content": profile_modifier_prompt(job_description, st.session_state.modified_resume)}],
-                                model=groq_model
+                                model=groq_model,
+                                temperature=.3
                             )
                             st.session_state.modified_resume = response.choices[0].message.content
                             st.session_state.modified_resume_fr = ""  # Reset French translation

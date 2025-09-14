@@ -63,7 +63,7 @@ Adapt the professional summary to match the target job description while maintai
 
 **STRUCTURE TO MAINTAIN:**
 - [ROLE TITLE] with [X]+ years of experience in [DOMAIN/TECHNOLOGY]
-- [SPECIFIC ACHIEVEMENT with quantified impact]
+- [SPECIFIC ACHIEVEMENT with quantified impact aligned to job requirements]
 - Expert in [3-4 key technologies/skills that match job requirements]
 
 **CONSTRAINTS:**

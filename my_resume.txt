@@ -9,24 +9,36 @@ EDUCATION
 •       MSc in Data Science | Burgundy School of Business, France | (2024-2025)
 •       Bachelor’s in computer science (Equivalent to Bac+4) | University of Kerala, India
 EXPERIENCE 
-AI Engineer Nurge | Remote | Paris , France                                                                                          04/2025 - Present
-•       Built agentic AI solution for Sales Development Representative (SDR) workflow using CrewAI and Claude with specialized agents for research, enrichment, and outreach.
-•       Designed and implemented workflow automation using n8n for Go-To-Market tools integration.
-Data & AI Intern Chanel | Paris, France                                                                                                                09/2024 - 03/2025
-•       Developed cloud analytics platform on Microsoft Fabric unifying 5 ERPs via Azure, Azure Data Factory, and 200+ dbt models.
-•       Reduced ELT latency by 50% through optimizations in SQL, dbt and CI/CD.
-AI Engineer Radisys Corporation | Bengaluru, India                                                                       04/2022 - 08/2023
-•       Developed a voice AI system for IoT devices handling 100K+ daily requests with 200ms latency.
-•       Designed and implemented an end-to-end model deployment pipeline that automated transformer model fine tuning, ONNX quantization, containerization and triton server deployment.
-•       Implemented a RAG architecture using OpenAI, Pinecone, and LlamaIndex for STB platforms, enabling Q&A on 100K+ multimedia titles.
-Consultant Data Scientist Applied Materials | Bengaluru, India                                                                              07/2020 - 03/2022
-•       Built an end-to-end ML pipeline on Databricks, including a Delta Lake-based feature store (200+ features), drift detection (KS test, PSI < 0.1), and automated retraining with MLflow; reduced training-serving skew by 90%.
-•       Deployed CatBoost models via MLflow Registry to Seldon Core, enabling containerized serving with A/B testing.
-•       Developed a Vector Autoregression (VAR) model deployed as a REST API, reducing equipment downtime by 40% via automated failure alerts. 
-Data Scientist PrimEra | Hyderabad, India                                                                                                  04/2018 - 06/2020
-•       Fine-tuned BERT model for clinical negation detection, improving accuracy by 36% and enhancing reliability of diagnostic support systems.
-•       Improved HL7 note ingestion by 70% using parallelized ETL pipelines (Python, Spark) and efficient NoSQL design (MongoDB).
-•       Developed chatbot to automate 30% of medical coding workflows, reducing manual effort and coding errors.
+
+AI Engineer
+Nurge | Remote | Paris, France               04/2025 - Present
+•	Built agentic AI solution for Sales Development Representative (SDR) workflow using CrewAI and Claude with specialized agents for research, enrichment, and outreach.
+•	Streamlined GTM operations by designing n8n workflow automation.
+
+Data & AI Intern
+Chanel | Paris, France               09/2024 - 03/2025
+•	Developed cloud native  analytics platform using Microsoft Fabric & Azure unifying 5 ERP.
+•	Reduced ELT latency by 50% through optimization of optimization of 200+ dbt models, SQL queries, and CI/CD pipelines.
+
+AI Engineer
+Radisys Corporation | Bengaluru, India            04/2022 - 08/2023
+•	Developed voice AI system handling 100K+ daily IoT requests with 200ms latency.
+•	Automated model deployment by creating end-to-end pipeline for transformer fine-tuning, ONNX quantization, and Triton server deployment.
+•	Enabled intelligent content discovery by implementing  RAG using OpenAI, Pinecone, and LlamaIndex, powering Q&A capabilities across 100K+ multimedia titles with 95% accuracy. 
+
+Consultant Data Scientist
+Applied Materials | Bengaluru, India             07/2020 - 03/2022
+•	Generated $180,000 annual cost savings by deploying predictive maintenance models  that reduced equipment downtime by 40% through alerting systems.
+•	Established MLOps by integrating MLflow, Databricks, into CI/CD pipelines, reducing deployment effort by 70% and accelerating production releases.
+•	Built ELT pipelines using Apache Spark on Databricks with HDFS for creating Delta Lake feature stores powering 10+ production ML models.
+
+Data Scientist
+PrimEra | Hyderabad, India              04/2018 - 06/2020
+•	Fine-tuned BERT model for clinical negation detection, improving Recall by 20% and enhancing reliability of diagnostic support systems. 
+•	Improved data ingestion performance by 70% by implementing parallelized ETL pipelines with Python and Spark, processing 1M+ HL7 medical records daily with improved data quality.
+•	Automated medical coding workflows by developing chat bot solution, eliminating 30% of manual coding tasks and reducing human error rates by 25%.
+
+
 CERTIFICATES
 •       Fundamentals of AI agents by Hugging Face
 •       Alteryx Designer Core
