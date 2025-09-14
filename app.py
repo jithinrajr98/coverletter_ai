@@ -23,7 +23,8 @@ if not api_key:
 GROQ_CLIENT = Groq(api_key=api_key)
 
 # Models
-groq_model = "meta-llama/llama-4-scout-17b-16e-instruct"
+# groq_model = "meta-llama/llama-4-scout-17b-16e-instruct"
+groq_model = "openai/gpt-oss-120b"
 
 # Initialize session state
 def init_session_state():
