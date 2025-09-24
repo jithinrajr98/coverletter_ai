@@ -63,12 +63,11 @@ Adapt the professional summary to match the target job description while maintai
 
 **STRUCTURE TO MAINTAIN:**
 - [ROLE TITLE] with [X]+ years of experience in [DOMAIN/TECHNOLOGY]
-- [SPECIFIC ACHIEVEMENT with quantified impact]
-- Expert in [3-4 key technologies/skills that match job requirements]
+- Expert in [3 key technologies/skills that match job requirements]
 
 **CONSTRAINTS:**
 - Keep the same professional tone and confidence level
-- Maintain 2-3 sentences maximum
+- Maintain 2 sentences maximum
 - Preserve any specific client types (Fortune 500, etc.) and dollar figures
 - Don't fabricate experience or skills not implied in the original
 
