@@ -56,16 +56,16 @@ def cover_letter_prompt(job_description: str, resume: str) -> str:
     Paris, France
     (+33) 745293669 | [jithinrajr98@gmail.com](mailto:jithinrajr98@gmail.com)
     
-    Dear [Hiring Manager],
+    Dear [Hiring Manager's Name],
     
-    I hope this message finds you well. I am writing to express my interest in the [JOB TITLE] position at [COMPANY NAME]. With my background in [KEY SKILL AREA 1], [KEY SKILL AREA 2], and [KEY SKILL AREA 3], I am excited about the opportunity to contribute to your team.
+    I hope this message finds you well. I am writing to express my interest in the [JOB TITLE] position at [COMPANY NAME]. With my [RELEVANT DEGREE/EDUCATION] and background in [KEY SKILL 1], [KEY SKILL 2], and [KEY SKILL 3], I am excited about the opportunity to contribute to your team.
     
-    In my previous role at [Your Current/Previous Company], I led [TYPE OF INITIATIVES] that significantly boosted [MEASURABLE OUTCOME 1] and [MEASURABLE OUTCOME 2]. My experience in both [RELEVANT AREA 1] and [RELEVANT AREA 2], along with my proficiency in tools such as [TOOL 1] and [TOOL 2], aligns well with your job requirements.
+    In my previous role at [Previous Company], I led [INITIATIVES] that significantly improved [OUTCOME 1] and [OUTCOME 2]. My experience in [AREA 1] and [AREA 2], along with my proficiency in tools such as [TOOL 1] and [TOOL 2], aligns well with your job requirements.
     
-    Attached are my CV and cover letter detailing my qualifications and accomplishments. Thank you for considering my application. I look forward to discussing how my skills and experiences align with the goals of [COMPANY NAME].
+    Thank you for considering my application. I look forward to discussing how my skills and experiences align with the goals of [COMPANY NAME].
     
     Best regards,
-    [Your Name]
+    Jithin Raj Reghuvaran
     
     **Guidelines:**
     1. Keep the email body concise and professional (3 short paragraphs as shown)

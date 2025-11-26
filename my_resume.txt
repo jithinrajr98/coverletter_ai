@@ -7,7 +7,7 @@ Open AI, Claude, Ollama, Mastra, LangChain, LangGraph, CrewAI, MCP, Hugging Face
 EDUCATION
 •       Master’s in management - Grande École Program | Burgundy School of Business, France | 2023-2025
 •       MSc in Data Science | Burgundy School of Business, France | (2024-2025)
-•       Bachelor’s in computer science (Equivalent to Bac+4) | University of Kerala, India
+•       Bachelor’s in computer science and engineering (Equivalent to Bac+4) | University of Kerala, India
 EXPERIENCE 
 
 AI Engineer
