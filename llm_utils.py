@@ -1,47 +1,91 @@
+# def cover_letter_prompt(job_description: str, resume: str) -> str:
+    
+#     """Generate a cover letter prompt based on job description and resume"""
+    
+#     return f"""
+#     Create a professional cover letter for the following job position using my resume. Follow this template exactly:
+
+#     Jithin Raj Reghuvaran
+#     Recent Master 2 Graduate in Data Science from France
+#     Paris, France
+#     (+33) 745293669 | [jithinrajr98@gmail.com](mailto:jithinrajr98@gmail.com)
+
+#     Subject: Application for the position of [JOB TITLE]
+
+#     Dear Hiring Manager,
+
+#     I'm writing to express my strong interest in the [JOB TITLE] position at [COMPANY NAME]. I am recent Master 2 graduate in Data Science from France with [X] years of experience in [KEY SKILL AREA 1] and [KEY SKILL AREA 2]. I've successfully delivered results such as [SPECIFIC ACHIEVEMENT OR PROJECT TYPE].
+
+#     My expertise with [RELEVANT TOOL/TECHNOLOGY 1], and [RELEVANT TOOL/TECHNOLOGY 2], aligns well with your requirements. For example, I [QUANTIFIED ACHIEVEMENT] by [SPECIFIC ACTION], resulting in [MEASURABLE OUTCOME].
+
+#     I'm particularly drawn to [COMPANY NAME] because of [SPECIFIC COMPANY PROJECT/INITIATIVE OR VALUES]. My experience in [KEY EXPERTISE AREA] would enable me to contribute meaningfully to [SPECIFIC TEAM GOAL OR CHALLENGE].
+
+#     I would welcome the opportunity to discuss how my background in [RELEVANT FIELD] could support your team's objectives.
+
+#     Best regards,
+#     Jithin Raj Reghuvaran
+
+#     **Guidelines:**
+#     1. Keep the letter concise and professional (150-200 words max)
+#     2. Focus on quantifiable achievements from my resume that relate to the job
+#     3. Match at least 3 key requirements from the job description
+#     4. If the job description doesn't match my resume perfectly, write a brief but enthusiastic letter expressing genuine interest
+#     5. Extract the company name and job title from the job description
+#     6. Use specific examples and metrics where possible
+#     7. Maintain a confident but humble tone
+#     8. Highlight the Master 2 Data Science degree when relevant to the position
+
+#     **Job Description:**
+#     {job_description}
+
+#     **My Resume:**
+#     {resume}
+
+#     Generate ONLY the cover letter text, no additional commentary.
+#     """
+
 def cover_letter_prompt(job_description: str, resume: str) -> str:
     
     """Generate a cover letter prompt based on job description and resume"""
     
     return f"""
-    Create a professional cover letter for the following job position using my resume. Follow this template exactly:
-
+    Create a professional cover letter  for the following job position using my resume. Follow this template exactly:
+    
     Jithin Raj Reghuvaran
     Recent Master 2 Graduate in Data Science from France
     Paris, France
     (+33) 745293669 | [jithinrajr98@gmail.com](mailto:jithinrajr98@gmail.com)
-
-    Subject: Application for the position of [JOB TITLE]
-
-    Dear Hiring Manager,
-
-    I'm writing to express my strong interest in the [JOB TITLE] position at [COMPANY NAME]. I am recent Master 2 graduate in Data Science from France with [X] years of experience in [KEY SKILL AREA 1] and [KEY SKILL AREA 2]. I've successfully delivered results such as [SPECIFIC ACHIEVEMENT OR PROJECT TYPE].
-
-    My expertise with [RELEVANT TOOL/TECHNOLOGY 1], and [RELEVANT TOOL/TECHNOLOGY 2], aligns well with your requirements. For example, I [QUANTIFIED ACHIEVEMENT] by [SPECIFIC ACTION], resulting in [MEASURABLE OUTCOME].
-
-    I'm particularly drawn to [COMPANY NAME] because of [SPECIFIC COMPANY PROJECT/INITIATIVE OR VALUES]. My experience in [KEY EXPERTISE AREA] would enable me to contribute meaningfully to [SPECIFIC TEAM GOAL OR CHALLENGE].
-
-    I would welcome the opportunity to discuss how my background in [RELEVANT FIELD] could support your team's objectives.
-
+    
+    Dear [Hiring Manager],
+    
+    I hope this message finds you well. I am writing to express my interest in the [JOB TITLE] position at [COMPANY NAME]. With my background in [KEY SKILL AREA 1], [KEY SKILL AREA 2], and [KEY SKILL AREA 3], I am excited about the opportunity to contribute to your team.
+    
+    In my previous role at [Your Current/Previous Company], I led [TYPE OF INITIATIVES] that significantly boosted [MEASURABLE OUTCOME 1] and [MEASURABLE OUTCOME 2]. My experience in both [RELEVANT AREA 1] and [RELEVANT AREA 2], along with my proficiency in tools such as [TOOL 1] and [TOOL 2], aligns well with your job requirements.
+    
+    Attached are my CV and cover letter detailing my qualifications and accomplishments. Thank you for considering my application. I look forward to discussing how my skills and experiences align with the goals of [COMPANY NAME].
+    
     Best regards,
-    Jithin Raj Reghuvaran
-
+    [Your Name]
+    
     **Guidelines:**
-    1. Keep the letter concise and professional (150-200 words max)
-    2. Focus on quantifiable achievements from my resume that relate to the job
-    3. Match at least 3 key requirements from the job description
-    4. If the job description doesn't match my resume perfectly, write a brief but enthusiastic letter expressing genuine interest
-    5. Extract the company name and job title from the job description
-    6. Use specific examples and metrics where possible
-    7. Maintain a confident but humble tone
-    8. Highlight the Master 2 Data Science degree when relevant to the position
-
+    1. Keep the email body concise and professional (3 short paragraphs as shown)
+    2. First paragraph: Express interest and highlight 2-3 key skill areas
+    3. Second paragraph: Mention previous role/company and specific achievements with measurable outcomes
+    4. Third paragraph: Reference attached documents and express interest in discussion
+    5. Extract company name and job title from the job description
+    6. Use specific tools, technologies, or strategies mentioned in the job description
+    7. Focus on achievements that "significantly boosted" or improved metrics
+    8. Maintain a warm, professional tone similar to the example
+    9. Include "I hope this message finds you well" as the opening
+    10. Replace [Your Name] with: Jithin Raj Reghuvaran
+    
     **Job Description:**
     {job_description}
-
+    
     **My Resume:**
     {resume}
-
-    Generate ONLY the cover letter text, no additional commentary.
+    
+    Generate ONLY the email subject and body text in the exact format shown above, no additional commentary.
     """
 
 def profile_modifier_prompt(job_description: str, current_profile: str) -> str:
@@ -63,7 +107,7 @@ Adapt the professional summary to match the target job description while maintai
 
 **STRUCTURE TO MAINTAIN:**
 - [ROLE TITLE] with [X]+ years of experience in [DOMAIN/TECHNOLOGY]
-- Expert in [3 key technologies/skills that match job requirements]
+- Expert in [3 key technologies/skills that match job requirements].
 
 **CONSTRAINTS:**
 - Keep the same professional tone and confidence level
